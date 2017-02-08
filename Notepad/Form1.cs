@@ -17,7 +17,7 @@ namespace Notepad
         {
             InitializeComponent();
         }
-        private RichTextBox GetRichTextBox()
+        public RichTextBox GetRichTextBox()
         {
             RichTextBox rtb = null; //making it initially null
             TabPage tp = tabControl1.SelectedTab; // saves the tab selection status in a tabpage type variable
@@ -76,6 +76,16 @@ namespace Notepad
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog savefile = new SaveFileDialog();
+            savefile.Filter = "*.txt(textfile)|*.txt";
+            if (savefile.ShowDialog() == DialogResult.OK)
+            {
+                rtb.SaveFile(savefile.FileName, RichTextBoxStreamType.PlainText);
+            }
+        }
+
+        private void save1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog savefile = new SaveFileDialog();
             savefile.Filter = "*.txt(textfile)|*.txt";
