@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Program written by: Erik Johnson
+//       Program date: 10 Feb 2017
+//Program description:  Chapter 4  extra credit
+// Encountered issues: learning how to use the file dialogue properly.
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
